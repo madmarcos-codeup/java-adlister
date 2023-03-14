@@ -8,13 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<%
-    String userName = request.getParameter("username");
-    String password = request.getParameter("password");
-    if(userName != null && userName.equals("admin") && password != null && password.equals("password")) {
-        response.sendRedirect("/profile.jsp");
-    }
-%>
 <html>
 <head>
     <title>Login</title>
@@ -28,7 +21,7 @@
 <div class="container-fluid">
     <h4>Please login:</h4>
 
-    <form method="post" action="login.jsp">
+    <form method="post" action="login">
         <div class="mb-3">
             <label for="username" class="form-label">Username</label>
             <input type="text" class="form-control w-25" id="username" name="username" placeholder="Enter username plz" value="admin">
